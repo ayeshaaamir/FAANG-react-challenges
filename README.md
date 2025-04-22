@@ -1,2 +1,2 @@
 # react-components-playground
-A collection of reusable and interactive frontend components built with React. Created for practice and interview preparation.
+A curated set of React practice problems drawn from MAANG/FAANG interviews, complete with clear, production‑ready solutions and expert insights on hooks, patterns, and performance
