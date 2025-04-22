@@ -90,7 +90,7 @@ const TabForm = () => {
                 ? "border-green-500 text-green-600 font-semibold"
                 : "border-transparent text-gray-600 hover:text-green-500"
             }`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => tabs[activeTab].validate() && setActiveTab(tab.id)}
           >
             {tab.name}
           </button>
