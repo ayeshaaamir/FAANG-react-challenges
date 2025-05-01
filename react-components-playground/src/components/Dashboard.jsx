@@ -6,9 +6,11 @@ import FileExplorer from "./FileExplorer";
 import ProgressBar from "./ProgressBar";
 import OTPInput from "./OTPInput";
 import NestedCheckboxes from "./NestedCheckboxes";
+import { nestedCheckboxData } from "../utils/constants";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("tab-form");
+  const [checked, setChecked] = useState({});
 
   const tabs = [
     { id: "tab-form", label: "Tab Form" },
@@ -35,7 +37,13 @@ const Dashboard = () => {
       case "otp-input":
         return <OTPInput />;
       case "nested-checkbox":
-        return <NestedCheckboxes />;
+        return (
+          <NestedCheckboxes
+            data={nestedCheckboxData}
+            checked={checked}
+            setChecked={setChecked}
+          />
+        );
       default:
         return null;
     }
